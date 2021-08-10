@@ -62,7 +62,7 @@ namespace TesodevChallangeAPI.Controllers
 
         }
 
-        [HttpPost("GetAll")]
+        [HttpGet("GetAll")]
         [Authorize(Roles = "Adres.GetAll")]
         public ActionResult GetAll()
         {
@@ -75,7 +75,7 @@ namespace TesodevChallangeAPI.Controllers
 
         }
 
-        [HttpPost("GetAllByCustomer")]
+        [HttpGet("GetAllByCustomer")]
         [Authorize(Roles = "Adres.GetAllByCustomer")]
         public ActionResult GetAllByCustomer(string id)
         {
@@ -88,7 +88,7 @@ namespace TesodevChallangeAPI.Controllers
 
         }
 
-        [HttpPost("bycustomeraddress")]
+        [HttpGet("bycustomeraddress")]
         [Authorize(Roles = "Adres.GetAddressByCustomer")]
         public ActionResult GetAddressByCustomer(string id)
         {

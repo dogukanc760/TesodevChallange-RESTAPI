@@ -45,7 +45,7 @@ namespace TesodevChallangeAPI.Controllers
             }
             return BadRequest(result.Message);
         }
-        [HttpGet("add")]
+        [HttpPost("add")]
         [Authorize(Roles = "Product.Add")]
         public ActionResult Add(Product product)
         {
@@ -57,7 +57,7 @@ namespace TesodevChallangeAPI.Controllers
             return BadRequest(result.Message);
         }
 
-        [HttpGet("update")]
+        [HttpPost("update")]
         [Authorize(Roles = "Product.Update")]
         public ActionResult Update(Product product)
         {
@@ -69,7 +69,7 @@ namespace TesodevChallangeAPI.Controllers
             return BadRequest(result.Message);
         }
 
-        [HttpGet("delete")]
+        [HttpPost("delete")]
         [Authorize(Roles = "Product.Delete")]
         public ActionResult Delete(Product product)
         {

@@ -83,7 +83,7 @@ namespace TesodevChallangeAPI.Controllers
             }
             return BadRequest(result.Message);
         }
-        [HttpPost("getlist")]
+        [HttpGet("getlist")]
         [Authorize(Roles = "Content.GetList")]
         public ActionResult GetList(OrderContent order)
         {
@@ -97,7 +97,7 @@ namespace TesodevChallangeAPI.Controllers
             return BadRequest(result.Message);
         }
 
-        [HttpPost("get")]
+        [HttpGet("get")]
         [Authorize(Roles = "Content.Get")]
         public ActionResult Get(string id)
         {
@@ -111,7 +111,7 @@ namespace TesodevChallangeAPI.Controllers
             return BadRequest(result.Message);
         }
 
-        [HttpPost("getlistbyid")]
+        [HttpGet("getlistbyid")]
         [Authorize(Roles = "Content.GetListById")]
         public ActionResult GetListById(string id)
         {
